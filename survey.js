@@ -2,12 +2,16 @@ document.getElementById("button").onclick = getResult;
 
 function getResult() {
     var counter = 0;
+    var checked = true;
     //contact question
     if(document.getElementById('contact_yes').checked) {
         counter += 10;
     }
     else if(document.getElementById('contact_no').checked) {
         counter += 5;
+    }
+    else {
+        checked = false;
     }
 
     //vaccination question
@@ -23,6 +27,10 @@ function getResult() {
     else if(document.getElementById('vax_no').checked) {
         counter += 8;
     }
+    else {
+        checked = false;
+    }
+
 
     //places question
     if(document.getElementById('public_places_little').checked) {
@@ -37,6 +45,10 @@ function getResult() {
     else if(document.getElementById('public_places_large').checked) {
         counter += 10;
     }
+    else {
+        checked = false;
+    }
+
 
     //mask question
     if(document.getElementById('mask_yes').checked) {
@@ -56,6 +68,10 @@ function getResult() {
     else if(document.getElementById('meals_ppLonely').checked) {
         counter += 4;
     }
+    else {
+        checked = false;
+    }
+
 
     //symptoms questions
     if(document.getElementById('fever').checked) {
@@ -97,5 +113,17 @@ function getResult() {
     if(document.getElementById('sob').checked) {
         counter += 10;
     }
-    alert ("counter: " + counter);
+
+    if (counter > 97){
+        counter = 97;
+    }
+    if (checked == false){
+        alert("Make sure you answer all the multiple choice questions!");
+    }
+    else {
+        var h = document.createElement("h2");
+        h.innerHTML = "You have a " + counter + "% chance of having COVID";
+        document.body.appendChild(h);
+        window.scrollTo(0,document.body.scrollHeight);
+    }
 }
