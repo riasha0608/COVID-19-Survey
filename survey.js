@@ -141,21 +141,18 @@ function getResult() {
             h = document.createElement("h3");
             h.innerHTML = "You most likely don't have COVID, but you could get a rapid test if you would like to make sure :)";
             document.body.appendChild(h);
-            // var song = new Audio('music/happy.mp3');
             song1[index].play();
         }
         else if (counter >= 45 && counter < 70) {
             h = document.createElement("h3");
             h.innerHTML = "You have a moderate chance of having COVID, we suggest getting a PCR test and being cautious.";
             document.body.appendChild(h);
-            // var song = new Audio('music/mixed_personalities.mp3');
             song2[index].play();
         }
         else if (counter >= 70 && counter <= 97) {
             h = document.createElement("h3");
             h.innerHTML = "You most likely have COVID. Please get both the rapid and PCR test done, and isolate yourself. Feel better!";
             document.body.appendChild(h);
-            // var song = new Audio('music/heartless.mp3');
             song3[index].play();
         }
         
