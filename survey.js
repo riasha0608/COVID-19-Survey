@@ -117,13 +117,29 @@ function getResult() {
     if (counter > 97){
         counter = 97;
     }
-    if (checked == false){
+    if (!checked){
         alert("Make sure you answer all the multiple choice questions!");
     }
     else {
         var h = document.createElement("h2");
         h.innerHTML = "You have a " + counter + "% chance of having COVID";
         document.body.appendChild(h);
+        if (counter > 0 && counter < 35) {
+            h = document.createElement("h3");
+            h.innerHTML = "You most likely don't have COVID, but you could get a rapid test if you would like to make sure :)";
+            document.body.appendChild(h);
+        }
+        else if (counter >= 35 && counter < 70) {
+            h = document.createElement("h3");
+            h.innerHTML = "You have a moderate chance of having COVID, we suggest getting a PCR test and being cautious.";
+            document.body.appendChild(h);
+        }
+        else if (counter >= 70 && counter <= 97) {
+            h = document.createElement("h3");
+            h.innerHTML = "You most likely have COVID. Please get both the rapid and PCR test done, and isolate yourself. Feel better!";
+            document.body.appendChild(h);
+        }
+        
         window.scrollTo(0,document.body.scrollHeight);
     }
 }
