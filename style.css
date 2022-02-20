@@ -2,5 +2,7 @@ h1 {
     text-align:center;
 }
 html {
-    background-color: aqua;
+    background-image: url("images/background.png");
+    background-repeat: no-repeat;
+    background-size:cover;
 }
