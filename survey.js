@@ -142,6 +142,8 @@ function getResult() {
             h = document.createElement("h3");
             h.innerHTML = "You most likely have COVID. Please get both the rapid and PCR test done, and isolate yourself. Feel better!";
             document.body.appendChild(h);
+            var song = new Audio('music/heartless.mp3');
+            song.play();
         }
         
         window.scrollTo(0,document.body.scrollHeight);
