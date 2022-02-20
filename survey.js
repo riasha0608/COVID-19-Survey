@@ -124,12 +124,12 @@ function getResult() {
         var h = document.createElement("h2");
         h.innerHTML = "You have a " + counter + "% chance of having COVID";
         document.body.appendChild(h);
-        if (counter > 0 && counter < 35) {
+        if (counter > 0 && counter < 45) {
             h = document.createElement("h3");
             h.innerHTML = "You most likely don't have COVID, but you could get a rapid test if you would like to make sure :)";
             document.body.appendChild(h);
         }
-        else if (counter >= 35 && counter < 70) {
+        else if (counter >= 45 && counter < 70) {
             h = document.createElement("h3");
             h.innerHTML = "You have a moderate chance of having COVID, we suggest getting a PCR test and being cautious.";
             document.body.appendChild(h);
