@@ -10,5 +10,38 @@
 </head>
 <body>
     <h1>Do YOU have COVID?</h1>
+
+    <p>In the last two weeks, have you been in contact with someone who has COVID-19? </p>
+    <form>
+        <input type="radio" id="contact_yes" name="contact" value="10">
+        <label for="contact_yes">Yes</label><br>
+        <input type="radio" id="contact_no" name="contact" value="5">
+        <label for="contact_no">No</label><br>
+    </form>
+
+    <p>Are you vaccinated? </p>
+    <form>
+        <input type="radio" id="vax_one" name="vax" value="7">
+        <label for="vax_one">I got my first vaccine</label><br>
+        <input type="radio" id="vax_two" name="vax" value="5">
+        <label for="vax_two">I got both my first and my second vaccine</label><br>
+        <input type="radio" id="vax_booster" name="vax" value="3">
+        <label for="vax_booster">I've got my booster</label><br>
+        <input type="radio" id="vax_no" name="vax" value="8">
+        <label for="vax_no">No</label><br>
+
+    </form>
+    <p>In the last week and a half, how many public places have you been to? (excluding school and work) </p>
+    <form>
+        <input type="radio" id="public_places_little" name="public_places" value="3">
+        <label for="public_places_little">0-5</label><br>
+        <input type="radio" id="public_places_small" name="public_places" value="6">
+        <label for="public_places_small">6-10</label><br>
+        <input type="radio" id="public_places_medium" name="public_places" value="8">
+        <label for="public_places_medium">11-15</label><br>
+        <input type="radio" id="public_places_large" name="public_places" value="10">
+        <label for="public_places_large">16-20</label><br>
+
+    </form>
 </body>
 </html>
