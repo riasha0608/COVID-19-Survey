@@ -135,6 +135,8 @@ function getResult() {
             h = document.createElement("h3");
             h.innerHTML = "You have a moderate chance of having COVID, we suggest getting a PCR test and being cautious.";
             document.body.appendChild(h);
+            var song = new Audio('music/mixed_personalities.mp3');
+            song.play();
         }
         else if (counter >= 70 && counter <= 97) {
             h = document.createElement("h3");
